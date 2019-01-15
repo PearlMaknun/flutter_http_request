@@ -81,8 +81,9 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
                 Padding(
-                  padding: EdgeInsets.all(24.0),
+                  padding: EdgeInsets.all(16.0),
                   child: CircleAvatar(
+                    radius: 54.0,
                     backgroundImage: NetworkImage(userData[index]["avatar"]),
                   ),
                 ),
