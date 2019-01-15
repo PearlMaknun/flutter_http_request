@@ -64,12 +64,30 @@ class _MyHomePageState extends State<MyHomePage> {
       body: ListView.builder(
         itemCount: userData == null ? 0 : userData.length,
         itemBuilder: (BuildContext context, int index) {
-          return Card(
+          /*return Card(
             child: Row(
               children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(24.0),
+                ),
                 CircleAvatar(
                   backgroundImage: NetworkImage(userData[index]["avatar"]),
                 ),
+              ],
+            ),
+          );*/
+          return Card(
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(24.0),
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(userData[index]["avatar"]),
+                  ),
+                ),
+                Text(
+                    "${userData[index]["first_name"]} ${userData[index]["last_name"]}")
               ],
             ),
           );
